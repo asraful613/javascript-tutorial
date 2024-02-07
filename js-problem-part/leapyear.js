@@ -10,17 +10,17 @@
 // const lipu=leapyear(2024);
 // console.log(lipu);
 
-function leapYear(year){
-    if(year %100 !== && year % 4===0){
-        return true;
-    }
-    else if(year %100===0 && year %4===0){
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-const lip=leapYear(2000);
-const lip2=leapYear(2052);
+// function leapYear(year){
+//     if(year %100 !==0 && year % 4===0){
+//         return true;
+//     }
+//     else if(year %100===0 && year %4===0){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+// const lip=leapYear(2000);
+// const lip2=leapYear(2052);
 
