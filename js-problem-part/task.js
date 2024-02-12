@@ -73,12 +73,42 @@
 // }
 // console.log(sortMaker([12, 15])); // Output: [4, 3]
 
-function findAddress(obj){
-    const street=obj.street;
-    const house=obj.house;
-    const address=obj.address;
+// function findAddress(obj){
+//     const street=obj.street;
+//     const house=obj.house;
+//     const address=obj.address;
 
-    const str=street+house+address;
-    return str;
-}
-console.log(findAddress({street:10,house:"upozilla",address:"daulatkhan"}));
+//     const str=street+house+address;
+//     return str;
+// }
+// console.log(findAddress({street:10,house:"upozilla",address:"daulatkhan"}));
+
+
+// const student={
+//     name:'asraful',
+//     id:121,
+//     address:'movie cinema',
+//     isSingle:true,
+//     friend:['apu','simanto','foysal','muhit'],
+//     movies:[{name:'no1',year:2012},{name:'king',year:2013}],
+//     act:function(){
+//         console.log('asraful is the best');
+//     },
+//     car:{
+//         brand:'tesla',
+//         price:5000,
+//         made:2025,
+//         manufacturer: {
+//             name:'tesla',
+//             ceo:'elon mask',
+//             country:'usa'
+//         }
+//     }
+// }
+// console.log(student.car);
+// console.log(student.act());
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+  console.log(getRndInteger(1,6));

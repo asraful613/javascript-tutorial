@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #item-2{
+            border: 2px solid red;
+        }
+        body{
+            border: 2px solid tomato;
+        }
+        ul{
+            border: 2px solid aqua;
+        }
+        section{
+            border: 2px solid blueviolet;
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>Exploring Asraful</h1>
+    <section id="list-container">
+        <ul id="list-ul">
+            <li id="item-1">lorem</li>
+            <li id="item-2">lorem</li>
+            <li id="item-3">lorem</li>
+            <li id="item-4">lorem</li>
+            <li id="item-5">lorem</li>
+            <li id="item-6">lorem</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log('item 2 clicked');
+            event.stopPropagation();
+        })
+        document.getElementById('list-ul').addEventListener('click',function(){
+            console.log('list ul');
+        })
+        document.getElementById('list-container').addEventListener('click',function(){
+            console.log('list contaienr');
+        })
+        document.getElementById('body').addEventListener('click',function(){
+            console.log('body all');
+        })
+    </script>
+</body>
+</html>

@@ -42,20 +42,20 @@ elements নাম্বার না , তাদে র ডি লি ট ক�
 রি টার্ন করবে [ 1 , 12 , 0 , -1 ]
 */
 // problem -----------> 3
-// function deleteInvalids(arr) {
-//     if (!Array.isArray(arr)) {
-//         return "Invalid Array";
-//     }
-//     const validNumbers = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
-//             validNumbers.push(arr[i]);
-//         }
-//     }
+function deleteInvalids(arr) {
+    if (!Array.isArray(arr)) {
+        return "Invalid Array";
+    }
+    const validNumbers = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (typeof arr[i] === 'number' && !isNaN(arr[i])) {
+            validNumbers.push(arr[i]);
+        }
+    }
 
-//     return validNumbers;
-// }
-// console.log(deleteInvalids({num: [ 1 , 2 , 3 ]})); 
+    return validNumbers;
+}
+console.log(deleteInvalids({num: [ 1 , 2 , 3 ]})); 
 
 
 /*
@@ -68,21 +68,21 @@ Website Name
 (প্রথম অক্ষর বড় হাতে র হবে )
 */
 // problem----------> 4
-// function password(obj) {
-//     const name = obj.name;
-//     const birthYear = obj.birthYear;
-//     const siteName = obj.siteName;
+function password(obj) {
+    const name = obj.name;
+    const birthYear = obj.birthYear;
+    const siteName = obj.siteName;
 
-//     if (!name || !birthYear || !siteName) {
-//         return "missing property";
-//     }
-//     if (isNaN(birthYear) || birthYear.toString().length !== 4) {
-//         return "Invalid";
-//     }
+    if (!name || !birthYear || !siteName) {
+        return "missing property";
+    }
+    if (isNaN(birthYear) || birthYear.toString().length !== 4) {
+        return "Invalid";
+    }
     
-//     const result = siteName + "#" + name + "@" + birthYear;
-//     return result;
-// }
+    const result = siteName + "#" + name + "@" + birthYear;
+    return result;
+}
 
 // console.log(password({ name: "kolimuddin", birthYear: 1999, siteName: "google" }));
 
@@ -100,24 +100,22 @@ more” ।
 */
 // problem-------> 5
 function monthlySavings(arr, livingCost) {
-    
     if (!Array.isArray(arr) || typeof livingCost !== 'number') {
         return "invalid input";
     }
+
     let totalIncome = 0;
     for (let i = 0; i < arr.length; i++) {
-    totalIncome += arr[i];
+        totalIncome += arr[i];
     }
-    let totalSavings = totalIncome;
-    if (totalIncome > 3000) {
-    totalSavings -= totalIncome * 0.2;
-    }
-    totalSavings -= livingCost;
-
-    if (totalSavings < 0) {
-        return "earn more";
-    } else {
+    let totalSavings = totalIncome - (totalIncome * 0.2) - livingCost;
+    if (totalSavings >= 0) {
         return totalSavings;
-    }    
+    } else {
+        return "earn more";
+    }
 }
-console.log(monthlySavings([ 1000 , 2000 , 3000 ] , 5400));
+console.log(monthlySavings([1000, 2000, 3000], 5400)); 
+console.log(monthlySavings([1000, 2000, 2500], 5000)); 
+console.log(monthlySavings([900, 2700, 3400], 10000)); 
+console.log(monthlySavings(100, [900, 2700, 3400])); 
