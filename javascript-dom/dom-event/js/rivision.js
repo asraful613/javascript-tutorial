@@ -26,9 +26,25 @@
 
 // sibling
 
-const ul=document.getElementById('li-container');
+// const ul=document.getElementById('li-container');
 // console.log(ul.children);
 // console.log(ul.parentElement);
 // console.log(ul.previousElementSibling);
 // console.log(ul.nextElementSibling);
 // console.log(ul.nextSibling);
+// const list =document.getElementById('li-container');
+// list.innerHTML="<p>hello</p>"
+
+// Create a new <h2> element
+// const h2 = document.createElement("h2");
+// h2.innerText = "Hey man";
+// h2.classList.add('first','second')
+// // Create a new <ul> element
+// const ul = document.createElement("ul");
+
+// // Append the <h2> element to the <ul> element
+// ul.appendChild(h2);
+
+// // Append the <ul> element to the document body
+// document.body.appendChild(ul);
+
